@@ -51,17 +51,3 @@ a:hover {
     color: #56949f;
     border-bottom: 1px solid #555;
 }
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-#job_title {
-    animation: fadeInOut 3s infinite;
-}
