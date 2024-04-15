@@ -9,6 +9,44 @@ let index = 0;
 let char_index = 0;
 let is_deleting = false;
 
+let current_command = "";
+let current_output_id = "";
+
+function run_command(command) {
+    if (current_command === command) {
+        document.getElementById("typed_command").textContent = "";
+        document
+            .querySelectorAll(".output")
+            .forEach((output) => (output.style.display = "none"));
+    } else {
+        current_command = command;
+        current_output_id = command + "_output";
+        document.getElementById("typed_command").textContent = "";
+        document
+            .querySelectorAll(".output")
+            .forEach((output) => (output.style.display = "none"));
+        type_command(command);
+    }
+}
+
+function type_command(command) {
+    let index = 0;
+    const command_text = "cat " + command + ".txt ";
+    const interval = setInterval(() => {
+        document.getElementById("typed_command").textContent +=
+            command_text[index];
+        index++;
+        if (index === command_text.length) {
+            clearInterval(interval);
+            display_output();
+        }
+    }, 50);
+}
+
+function display_output() {
+    document.getElementById(current_output_id).style.display = "block";
+}
+
 function char_delete() {
     const current_text = job_titles[index];
     if (!is_deleting) {

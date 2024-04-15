@@ -11,52 +11,55 @@
             <h1>Dagmawi Mekonen</h1>
             <p id="job_title">Developer Workflow Optimizer</p>
         </header>
-        <script src="main.js"></script>
-        <div class="container">
-            <h2>About</h2>
-            <p>
-                Hi, I am Dagmawi Mekonen and I am a Developer. I try to
-                understand how things work and improve upon them, whether it is
-                an operating system, a program, or an object that I use every
-                day.
-            </p>
-            <p>
-                My studies are mainly about Operating Systems, workflow
-                optimizations, low-level programming specializing in Rust, and
-                Fullstack development. I like to keep things simple and I am a
-                supporter <a href="https://suckless.org/philosophy/">suckless</a>
-                philosophy that I try to incorporate in every aspect of
-                programming.
-            </p>
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/dagregi/SkeleMuzz.git"
-                        >SekelMuzz
-                    </a>
-                    - Music streaming web app made with Sveltekit and Tailwind
-                    CSS
-                </li>
-                <li>
-                    <a href="https://github.com/dagregi/game-of-life-cli.git">
-                        game-of-life-cli</a
-                    >
-                    - Conway's Game of Life in command line implemented in Rust
-                </li>
-                <li>
-                    <a href="https://github.com/dagregi/crusty-botnet.git"
-                        >crusty-botnet </a
-                    >- A simple botnet implementation in Rust
-                </li>
-                <li>
-                    <a href="https://github.com/dagregi/nvim.git">neovim </a>-
-                    My personal Neovim configuration
-                </li>
-            </ul>
-            <h2>Contact Me</h2>
-            You can reach me via
-            <a href="mailto:dagim6066@gmail.com">Email</a> or
-            <a href="https://github.com/dagregi" target="_blank">GitHub</a>
+        <div class="terminal">
+            <div class="commands">
+                <div class="command" onclick="run_command('about')">about</div>
+                <div class="command" onclick="run_command('projects')">
+                    projects
+                </div>
+                <div class="command" onclick="run_command('contact')">
+                    contact
+                </div>
+            </div>
+            <div class="prompt">
+                dagregi@portfolio:~$ <span id="typed_command"></span>
+            </div>
+            <div class="output" id="about_output">
+                <p>
+                    Hi, I am Dagmawi Mekonen and I am a Developer. I try to
+                    understand how things work and improve upon them, whether it
+                    is an operating system, a program, or an object that I use
+                    every day.
+                </p>
+                <p>
+                    My studies are mainly about Operating Systems, workflow
+                    optimizations, low-level programming specializing in Rust,
+                    and Fullstack development. I like to keep things simple and
+                    I am a supporter
+                    <a href="https://suckless.org/philosophy/">suckless</a>
+                    philosophy that I try to incorporate in every aspect of
+                    programming.
+                </p>
+            </div>
+            <div class="output" id="projects_output">
+                <a href="https://github.com/dagregi/SkeleMuzz.git">SekelMuzz</a
+                >: Music streaming web app made with Sveltekit and Tailwind
+                CSS<br />
+                <a href="https://github.com/dagregi/game-of-life-cli.git"
+                    >game-of-life-cli</a
+                >: Conway's Game of Life in command line implemented in Rust<br />
+                <a href="https://github.com/dagregi/crusty-botnet.git"
+                    >crusty-botnet</a
+                >: A simple botnet implementation in Rust<br />
+                <a href="https://github.com/dagregi/nvim.git">neovim</a>: My
+                personal Neovim configuration
+            </div>
+            <div class="output" id="contact_output">
+                You can reach me via
+                <a href="mailto:dagim6066@gmail.com">Email</a> or
+                <a href="https://github.com/dagregi" target="_blank">GitHub</a>
+            </div>
         </div>
+        <script src="main.js"></script>
     </body>
 </html>
