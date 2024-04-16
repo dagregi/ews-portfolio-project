@@ -10,8 +10,7 @@ body {
     background-color: #000;
     color: #eee;
     width: 900px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: auto;
     font-family: Terminal, monospace;
     line-height: 1.6;
 }
@@ -24,10 +23,6 @@ h1 {
 }
 p {
     margin-bottom: 1.5rem;
-}
-ul {
-    list-style: none;
-    padding: 0;
 }
 a {
     color: #8be9fd;
@@ -44,8 +39,8 @@ a:hover {
     background-color: #111;
     border: 1px solid #555;
     padding: 10px;
-    overflow: auto;
-    height: 600px;
+    height: auto;
+    max-height: none;
 }
 .prompt {
     color: #50fa7b;
@@ -71,4 +66,34 @@ a:hover {
     word-wrap: break-word;
     line-height: 1.6;
     margin: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    header {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+    .terminal {
+        height: auto;
+        max-height: none;
+    }
+    .commands {
+        flex-wrap: wrap;
+    }
+    .command {
+        margin: 0 auto;
+    }
+    .output {
+        margin: 0.5rem;
+    }
 }
